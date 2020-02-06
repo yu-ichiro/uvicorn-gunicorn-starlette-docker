@@ -1,21 +1,26 @@
-[![Build Status](https://travis-ci.org/tiangolo/uvicorn-gunicorn-starlette-docker.svg?branch=master)](https://travis-ci.org/tiangolo/uvicorn-gunicorn-starlette-docker)
+[![Build Status](https://travis-ci.org/yu-ichiro/uvicorn-gunicorn-starlette-docker.svg?branch=yu-ichiro)](https://travis-ci.org/yu-ichiro/uvicorn-gunicorn-starlette-docker)
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`python3.7`, `latest` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-starlette-docker/blob/master/python3.7/Dockerfile)
-* [`python3.6` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-starlette-docker/blob/master/python3.6/Dockerfile)
-* [`python3.6-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-starlette-docker/blob/master/python3.6-alpine3.8/Dockerfile)
-* [`python3.7-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/uvicorn-gunicorn-starlette-docker/blob/master/python3.7-alpine3.8/Dockerfile)
+* [`python3.8`, `latest` _(Dockerfile)_](https://github.com/yu-ichiro/uvicorn-gunicorn-starlette-docker/blob/master/python3.8/Dockerfile)
+* [`python3.7` _(Dockerfile)_](https://github.com/yu-ichiro/uvicorn-gunicorn-starlette-docker/blob/master/python3.7/Dockerfile)
+* [`python3.6` _(Dockerfile)_](https://github.com/yu-ichiro/uvicorn-gunicorn-starlette-docker/blob/master/python3.6/Dockerfile)
+* [`python3.8-slim` _(Dockerfile)_](https://github.com/yu-ichiro/uvicorn-gunicorn-starlette-docker/blob/master/python3.8-slim/Dockerfile)
+* [`python3.7-slim` _(Dockerfile)_](https://github.com/yu-ichiro/uvicorn-gunicorn-starlette-docker/blob/master/python3.7-slim/Dockerfile)
+* [`python3.6-slim` _(Dockerfile)_](https://github.com/yu-ichiro/uvicorn-gunicorn-starlette-docker/blob/master/python3.6-slim/Dockerfile)
+* [`python3.8-alpine3.11` _(Dockerfile)_](https://github.com/yu-ichiro/uvicorn-gunicorn-starlette-docker/blob/master/python3.8-alpine3.11/Dockerfile)
+* [`python3.7-alpine3.11` _(Dockerfile)_](https://github.com/yu-ichiro/uvicorn-gunicorn-starlette-docker/blob/master/python3.7-alpine3.11/Dockerfile)
+* [`python3.6-alpine3.11` _(Dockerfile)_](https://github.com/yu-ichiro/uvicorn-gunicorn-starlette-docker/blob/master/python3.6-alpine3.11/Dockerfile)
 
-**Note**: Note: There are [tags for each build date](https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-starlette/tags). If you need to "pin" the Docker image version you use, you can select one of those tags. E.g. `tiangolo/uvicorn-gunicorn-starlette:python3.7-2019-10-15`.
+**Note**: Note: There are [tags for each build date](https://hub.docker.com/r/yuichiroluke/uvicorn-gunicorn-starlette/tags). If you need to "pin" the Docker image version you use, you can select one of those tags. E.g. `yuichiroluke/uvicorn-gunicorn-starlette:python3.8-2019-02-07`.
 
 # uvicorn-gunicorn-starlette
 
-[**Docker**](https://www.docker.com/) image with [**Uvicorn**](https://www.uvicorn.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance [**Starlette**](https://www.starlette.io/) web applications in **[Python](https://www.python.org/) 3.7** and **3.6** with performance auto-tuning. Optionally with Alpine Linux.
+[**Docker**](https://www.docker.com/) image with [**Uvicorn**](https://www.uvicorn.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance [**Starlette**](https://www.starlette.io/) web applications in **[Python](https://www.python.org/) 3.8**, **3.7** and **3.6** with performance auto-tuning. Optionally with Alpine Linux.
 
-**GitHub repo**: [https://github.com/tiangolo/uvicorn-gunicorn-starlette-docker](https://github.com/tiangolo/uvicorn-gunicorn-starlette-docker)
+**GitHub repo**: [https://github.com/yu-ichiro/uvicorn-gunicorn-starlette-docker](https://github.com/yu-ichiro/uvicorn-gunicorn-starlette-docker)
 
-**Docker Hub image**: [https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-starlette/](https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-starlette/)
+**Docker Hub image**: [https://hub.docker.com/r/yuichiroluke/uvicorn-gunicorn-starlette/](https://hub.docker.com/r/yuichiroluke/uvicorn-gunicorn-starlette/)
 
 ## Description
 
@@ -43,7 +48,7 @@ That way, you get the best of concurrency and parallelism.
 
 Starlette is a lightweight ASGI framework/toolkit, which is ideal for building high performance asyncio services.
 
-### `tiangolo/uvicorn-gunicorn-starlette`
+### `yuichiroluke/uvicorn-gunicorn-starlette`
 
 This image will set a sensible configuration based on the server it is running on (the amount of CPU cores available) without making sacrifices.
 
@@ -51,9 +56,9 @@ It has sensible defaults, but you can configure it with environment variables or
 
 There is also an Alpine version. If you want it, use one of the Alpine tags from above.
 
-### `tiangolo/uvicorn-gunicorn`
+### `yuichiroluke/uvicorn-gunicorn`
 
-This image (`tiangolo/uvicorn-gunicorn-starlette`) is based on [**tiangolo/uvicorn-gunicorn**](https://github.com/tiangolo/uvicorn-gunicorn-docker).
+This image (`yuichiroluke/uvicorn-gunicorn-starlette`) is based on [**yu-ichiro/uvicorn-gunicorn**](https://github.com/yu-ichiro/uvicorn-gunicorn-docker).
 
 That image is what actually does all the work.
 
@@ -61,11 +66,11 @@ This image just installs Starlette and has the documentation specifically target
 
 If you feel confident about your knowledge of Uvicorn, Gunicorn and ASGI, you can use that image directly.
 
-### `tiangolo/uvicorn-gunicorn-fastapi`
+### `yuichiroluke/uvicorn-gunicorn-fastapi`
 
-There is a sibling Docker image: [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker)
+There is a sibling Docker image: [**yu-ichiro/uvicorn-gunicorn-fastapi**](https://github.com/yu-ichiro/uvicorn-gunicorn-fastapi-docker)
 
-If you are creating a new [**FastAPI**](https://fastapi.tiangolo.com/) web application you should use [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker) instead.
+If you are creating a new [**FastAPI**](https://fastapi.tiangolo.com/) web application you should use [**yu-ichiro/uvicorn-gunicorn-fastapi**](https://github.com/yu-ichiro/uvicorn-gunicorn-fastapi-docker) instead.
 
 **Note**: FastAPI is based on Starlette and adds several features on top of it. Useful for APIs and other cases: data validation, data conversion, documentation with OpenAPI, dependency injection, security/authentication and others.
 
@@ -74,7 +79,7 @@ If you are creating a new [**FastAPI**](https://fastapi.tiangolo.com/) web appli
 * You don't need to clone the GitHub repo. You can use this image as a base image for other images, using this in your `Dockerfile`:
 
 ```Dockerfile
-FROM tiangolo/uvicorn-gunicorn-starlette:python3.7
+FROM yuichiroluke/uvicorn-gunicorn-starlette:python3.8
 
 COPY ./app /app
 ```
@@ -97,7 +102,7 @@ docker build -t myimage ./
 * Create a `Dockerfile` with:
 
 ```Dockerfile
-FROM tiangolo/uvicorn-gunicorn-starlette:python3.7
+FROM yuichiroluke/uvicorn-gunicorn-starlette:python3.8
 
 COPY ./app /app
 ```
